@@ -1,0 +1,2 @@
+
+cat 'file.txt' | perl -nalF';' -e 'BEGIN{print ;print "=" x 60;print"Файлы больше 1 мегабайта";print "=" x 60;}; $a=0 ; if ($F[5] > 1000000) { $$a=$$a+1; print "$F[9] " } END { print "=" x 60; printf "Общее количество стpок в таблице = '$.'. Количество строк удовлетворяющее условию = "; print "0" if ($$a == 0) ;print $$a if ($$a != 0);  print}'
