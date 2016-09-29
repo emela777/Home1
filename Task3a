@@ -1,2 +1,1 @@
-
-cat 'file.txt' | perl -MData::Dumper -nalF';' -e  'while($b<10) {$A[$$a][$b]=$F[$b]; ++$b;} ;$b=0; ++$$a ; END{print Dumper(@A)}'
+cat 'file.txt' | perl -MO=Deparse -MData::Dumper -nalF';' -e  'while($b<10) {$A[$$][$b]=$F[$b]; ++$b;} ;$b=0; ++$a ; END{print Dumper(@A)}'| tee hometask3a.pl
