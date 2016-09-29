@@ -1,2 +1,1 @@
-
-cat 'file.txt' | perl -MData::Printer -nalF';' -e  'while($b<10) {$A[$$a][$b]=$F[$b]; ++$b;} ;$b=0; ++$$a ; END{p(@A)}'
+cat 'file.txt' | perl -MO=Deparse -MData::Printer -nalF';' -e  'while($b<10) {$A[$a][$b]=$F[$b]; ++$b;} ;$b=0; ++$a ; END{p(@A)}'| tee hometask3b.pl
